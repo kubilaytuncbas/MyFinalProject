@@ -9,6 +9,8 @@ using System.Text;
 
 namespace Core.Aspects.Autofac.Validation
 {
+    //attiribute: Bir methoda anlam katar.Aspect var gibi...
+    //aspect: methodun kodun başında, ortasında, sonunda mı çalıştırılacağına karar veren yapı.
     public class ValidationAspect : MethodInterception
     {
         private Type _validatorType;
