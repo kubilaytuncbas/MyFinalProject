@@ -1,4 +1,5 @@
 ﻿ using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.CCS;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
@@ -31,6 +32,9 @@ namespace Business.Concrete
             
         }
 
+        //Encryption,Hashing, MD5, SHA1, Salting
+        //Claim
+        [SecuredOperation("admin,editor")]
         [ValidationAspect(typeof (ProductValidator))]
         //validation
         public IResult Add(Product product)
